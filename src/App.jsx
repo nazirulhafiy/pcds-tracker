@@ -333,20 +333,62 @@ function MilestoneItem({ milestone }) {
   );
 }
 
+function ChevronIcon({ expanded, color }) {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      style={{
+        transform: expanded ? "rotate(90deg)" : "rotate(0deg)",
+        transition: "transform 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
+        flexShrink: 0,
+      }}
+    >
+      <path
+        d="M7.5 4.5L13 10L7.5 15.5"
+        stroke={color}
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 function ProjectCard({ project, sectorColor }) {
   const [expanded, setExpanded] = useState(false);
+  const [hovered, setHovered] = useState(false);
+  const contentRef = useRef(null);
+  const [contentHeight, setContentHeight] = useState(0);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setContentHeight(contentRef.current.scrollHeight);
+    }
+  }, [expanded]);
+
+  const doneMilestones = project.milestones.filter((m) => m.done).length;
+  const totalMilestones = project.milestones.length;
 
   return (
     <div
       style={{
-        borderLeft: `3px solid ${sectorColor}`,
+        borderLeft: `3px solid ${expanded ? sectorColor : hovered ? sectorColor : sectorColor + "88"}`,
         padding: "20px 24px",
         marginBottom: "2px",
-        backgroundColor: expanded ? "rgba(255,255,255,0.03)" : "transparent",
+        backgroundColor: expanded
+          ? "rgba(255,255,255,0.03)"
+          : hovered
+          ? "rgba(255,255,255,0.015)"
+          : "transparent",
         cursor: "pointer",
-        transition: "background-color 0.2s ease",
+        transition: "all 0.25s ease",
       }}
       onClick={() => setExpanded(!expanded)}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "16px", flexWrap: "wrap" }}>
         <div style={{ flex: 1, minWidth: "200px" }}>
@@ -362,33 +404,48 @@ function ProjectCard({ project, sectorColor }) {
           >
             {project.name}
           </h3>
-          <div style={{ marginTop: "6px", fontSize: "12px", color: "rgba(255,255,255,0.4)" }}>
-            {project.lead}
+          <div style={{ marginTop: "6px", fontSize: "12px", color: "rgba(255,255,255,0.4)", display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
+            <span>{project.lead}</span>
             {project.value && project.value !== "—" && (
-              <span style={{ marginLeft: "12px", color: sectorColor, fontWeight: 600 }}>
+              <span style={{ color: sectorColor, fontWeight: 600 }}>
                 {project.value}
+              </span>
+            )}
+            {!expanded && (
+              <span
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "4px",
+                  fontSize: "11px",
+                  color: "rgba(255,255,255,0.3)",
+                  fontFamily: "'JetBrains Mono', 'SF Mono', monospace",
+                }}
+              >
+                <span style={{ color: doneMilestones > 0 ? "#4ECCA3" : "rgba(255,255,255,0.25)" }}>●</span>
+                {doneMilestones}/{totalMilestones} milestones
               </span>
             )}
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
           <StatusBadge text={project.status} color={project.statusColor} />
-          <span
-            style={{
-              fontSize: "18px",
-              color: "rgba(255,255,255,0.3)",
-              transform: expanded ? "rotate(90deg)" : "rotate(0deg)",
-              transition: "transform 0.2s ease",
-              display: "inline-block",
-            }}
-          >
-            ›
-          </span>
+          <ChevronIcon
+            expanded={expanded}
+            color={hovered || expanded ? "rgba(255,255,255,0.6)" : "rgba(255,255,255,0.2)"}
+          />
         </div>
       </div>
 
-      {expanded && (
-        <div style={{ marginTop: "16px", animation: "fadeIn 0.3s ease" }}>
+      <div
+        style={{
+          overflow: "hidden",
+          maxHeight: expanded ? `${contentHeight}px` : "0px",
+          opacity: expanded ? 1 : 0,
+          transition: "max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease",
+        }}
+      >
+        <div ref={contentRef} style={{ paddingTop: "16px" }}>
           <p
             style={{
               fontSize: "13.5px",
@@ -412,7 +469,7 @@ function ProjectCard({ project, sectorColor }) {
                 marginBottom: "8px",
               }}
             >
-              Milestones
+              Milestones — {doneMilestones} of {totalMilestones} complete
             </div>
             {project.milestones.map((m, i) => (
               <MilestoneItem key={i} milestone={m} />
@@ -440,7 +497,7 @@ function ProjectCard({ project, sectorColor }) {
             ))}
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
@@ -583,7 +640,7 @@ function StatsBar() {
 }
 
 function FilterBar({ active, onFilter }) {
-  const filters = [{ id: "all", label: "All Sectors", color: "#4ECCA3" }, ...SECTORS.map((s) => ({ id: s.id, label: s.name, color: s.color }))];
+  const filters = [{ id: "all", label: "All Sectors" }, ...SECTORS.map((s) => ({ id: s.id, label: s.name, color: s.color }))];
 
   return (
     <div
@@ -606,7 +663,7 @@ function FilterBar({ active, onFilter }) {
             border: active === f.id ? `1px solid ${f.color || "rgba(255,255,255,0.5)"}` : "1px solid rgba(255,255,255,0.1)",
             borderRadius: "2px",
             backgroundColor: active === f.id ? `${(f.color || "#fff")}15` : "transparent",
-            color: active === f.id ? (f.id === "all" ? "rgba(255,255,255,0.9)" : f.color) : "rgba(255,255,255,0.4)",
+            color: active === f.id ? f.color || "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.4)",
             cursor: "pointer",
             transition: "all 0.15s ease",
             fontFamily: "'JetBrains Mono', 'SF Mono', monospace",
