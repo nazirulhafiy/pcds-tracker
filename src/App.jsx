@@ -583,7 +583,7 @@ function StatsBar() {
 }
 
 function FilterBar({ active, onFilter }) {
-  const filters = [{ id: "all", label: "All Sectors" }, ...SECTORS.map((s) => ({ id: s.id, label: s.name, color: s.color }))];
+  const filters = [{ id: "all", label: "All Sectors", color: "#4ECCA3" }, ...SECTORS.map((s) => ({ id: s.id, label: s.name, color: s.color }))];
 
   return (
     <div
