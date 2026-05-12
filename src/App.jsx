@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 // ─── DATA ───────────────────────────────────────────────────────────────────
-const LAST_UPDATED = "2026-03-24";
+const LAST_UPDATED = "2026-05-12";
 
 const SECTORS = [
   {
@@ -29,22 +29,7 @@ const SECTORS = [
           { label: "The Edge — KUTS hydrogen plant relocation", url: "https://theedgemalaysia.com/node/786079" },
         ],
       },
-      {
-        name: "Hydrogen Production & Refuelling — Phase 1",
-        status: "In Progress",
-        statusColor: "#F0AD4E",
-        lead: "Sarawak Metro / Linde EOX Sdn Bhd",
-        value: "RM58 million",
-        summary:
-          "Relocation and upgrading of Sarawak Energy's hydrogen production plant from Bintawa to ART Depot in Rembus, Kota Samarahan. Will produce approximately 1 tonne of green hydrogen once fully operational.",
-        milestones: [
-          { date: "2025-12-15", text: "Letter of Acceptance signed with Linde EOX", done: true },
-          { date: "2026-Q4", text: "Target completion of design-and-build contract", done: false },
-        ],
-        sources: [
-          { label: "DayakDaily — Sarawak Metro awards RM58M contract", url: "https://dayakdaily.com/sarawak-metro-awards-rm58-mil-contract-to-linde-eox-to-upgrade-relocate-kuts-hydrogen-plant/" },
-        ],
-      },
+      // Hydrogen Production (RM58M Linde EOX) subsumed into KUTS — data merged above
     ],
   },
   {
@@ -66,28 +51,11 @@ const SECTORS = [
           { date: "Ongoing", text: "Main civil works and electromechanical installation", done: false },
         ],
         sources: [
-          { label: "RECODA — Sarawak energy infrastructure", url: "https://recoda.gov.my/career/" },
+          { label: "DayakDaily — Green revolution supercharging Sarawak energy (Aug 2025)", url: "https://dayakdaily.com/green-revolution-supercharging-sarawaks-energy-prowess/" },
+          { label: "DayakDaily — ASEAN grid & Baleh 1,285MW by 2030 (Jan 2026)", url: "https://dayakdaily.com/sarawak-urges-asean-to-study-european-union-nordic-models-to-realise-regional-power-grid-dream/" },
         ],
       },
-      {
-        name: "Sarawak Energy Transition Policy (SET-P)",
-        status: "Active Policy",
-        statusColor: "#4ECCA3",
-        lead: "Sarawak Government",
-        value: "RM700 billion target investment by 2050",
-        summary:
-          "Seven-pillar framework to decarbonise Sarawak's energy systems. Projects RM550B cumulative GDP, 80,000 jobs, and RM700B investments. Covers renewable energy expansion, green hydrogen, carbon trading, and cross-border grid connections (Sabah: 50MW since early 2026; West Kalimantan: 190-200MW since 2016).",
-        milestones: [
-          { date: "2026-Q1", text: "Sabah grid connection live — 50MW supply", done: true },
-          { date: "2030", text: "Target: Maintain ≥60% renewable energy capacity mix", done: false },
-          { date: "2030", text: "Target: 10GW generation capacity", done: false },
-          { date: "2050", text: "Target: Net-zero emissions", done: false },
-        ],
-        sources: [
-          { label: "DayakDaily — SET-P RM700B investment", url: "https://dayakdaily.com/sarawak-to-attract-rm700-bln-investment-create-80000-jobs-through-ambitious-energy-transition/" },
-          { label: "DayakDaily — PCDS 2030 sustainability", url: "https://dayakdaily.com/sustainability-core-to-sarawaks-devt-strategy-under-pcds-2030-says-premier-abang-johari/" },
-        ],
-      },
+      // SET-P policy subsumed into PCDS 2030 Framework
       {
         name: "Green Hydrogen Economy — H2ornbill & H2biscus",
         status: "Planning / Early Stage",
@@ -102,6 +70,8 @@ const SECTORS = [
           { date: "2027+", text: "Target: Large-scale commercial hydrogen production and export", done: false },
         ],
         sources: [
+          { label: "DayakDaily — H2ornbill & H2biscus hydrogen economy (Aug 2025)", url: "https://dayakdaily.com/sarawak-powers-ahead-in-hydrogen-economy/" },
+          { label: "DayakDaily — Bintulu low-carbon industrial push (Jan 2026)", url: "https://dayakdaily.com/bintulu-set-to-anchor-msias-low-carbon-industrial-push-as-swak-integrates-hydrogen-ccus-and-carbon-pricing/" },
           { label: "FULCRUM — Sarawak's green hydrogen ambitions", url: "https://fulcrum.sg/sarawaks-green-hydrogen-ambitions-what-it-means-for-southeast-asia/" },
         ],
       },
@@ -126,25 +96,11 @@ const SECTORS = [
           { date: "2026", text: "Target: First data centre operational", done: false },
         ],
         sources: [
-          { label: "DCD — FutureData first off-taker", url: "https://www.datacenterdynamics.com/en/news/futuredata-announces-first-off-taker-at-500mw-malaysian-data-center-park-in-sarawak/" },
+          { label: "DCD — FutureData first off-taker (2025)", url: "https://www.datacenterdynamics.com/en/news/futuredata-announces-first-off-taker-at-500mw-malaysian-data-center-park-in-sarawak/" },
+          { label: "The Edge — FutureData 135-acre park in Kuching (Aug 2025)", url: "https://theedgemalaysia.com/node/767538" },
         ],
       },
-      {
-        name: "Sarawak Digital Economy Blueprint 2030",
-        status: "Active Policy",
-        statusColor: "#4ECCA3",
-        lead: "Sarawak Government / SMA",
-        value: "—",
-        summary:
-          "Vision: Sarawak as a leading digital economy and society by 2030. Promotes AI, IoT, and Big Data across sectors. Five strategic pillars focusing on economic growth, digital society, business ecosystem, technology foundations, and government digital services.",
-        milestones: [
-          { date: "Ongoing", text: "Whole-of-society digital transformation across state agencies", done: false },
-          { date: "2030", text: "Target: Leading digital economy and society in region", done: false },
-        ],
-        sources: [
-          { label: "MIDA — Digital Sarawak presentation", url: "https://www.mida.gov.my/wp-content/uploads/2024/07/Harnessing-Digitalisation-for-Sustainable-Development-.pdf" },
-        ],
-      },
+      // Digital Economy Blueprint subsumed into PCDS 2030 Framework
       {
         name: "SMD Semiconductor — GaN Chip Development",
         status: "Active",
@@ -158,7 +114,8 @@ const SECTORS = [
           { date: "TBD", text: "Potential Indonesia semiconductor collaboration", done: false },
         ],
         sources: [
-          { label: "DayakDaily — ART & semiconductor update Feb 2026", url: "https://dayakdaily.com/hydrogen-powered-art-to-begin-service-in-kuching-in-final-quarter-of-2026-premier/" },
+          { label: "DayakDaily — SMD Advanced Chip Integration Centre (Sep 2025)", url: "https://dayakdaily.com/sarawak-to-establish-smd-advanced-chip-integration-centre-to-power-semiconductor-leap/" },
+          { label: "DayakDaily — Keteq AI chip secures global IP rights (Oct 2025)", url: "https://dayakdaily.com/sarawak-designed-keteq-ai-chip-set-to-secure-global-ip-rights-by-early-2026/" },
         ],
       },
     ],
@@ -182,38 +139,51 @@ const SECTORS = [
           { date: "Ongoing", text: "Rural infrastructure via URDA, HDA, NRDA", done: false },
         ],
         sources: [
+          { label: "DayakDaily — SCORE: RM125B investment, 53K jobs (May 2025)", url: "https://dayakdaily.com/score-fuels-sarawaks-economic-growth-with-rm125-bln-investment-53000-jobs-created/" },
           { label: "RECODA official site", url: "https://recoda.gov.my/" },
         ],
       },
       {
         name: "Sarawak Cancer Centre",
-        status: "Pre-tender",
-        statusColor: "#5DADE2",
-        lead: "JKR / Federal-State collaboration",
-        value: "—",
+        status: "Equipment Procurement",
+        statusColor: "#F0AD4E",
+        lead: "JKR / Sarawak Government",
+        value: "RM1.52 billion (RM500M equipment fronted)",
         summary:
-          "New cancer treatment centre for Sarawak. PM has directed JKR to expedite the project for tendering in Q1 2026 with target operations before 2031.",
+          "Sarawak's first dedicated cancer centre in Kota Samarahan. PM directed JKR to expedite tendering in Q1 2026; Sarawak fronted RM500M for medical equipment. One of 5 key projects under the RM40B healthcare boost in 13MP. Expected operational before 2031.",
         milestones: [
-          { date: "2026-Q1", text: "Tender process to begin", done: false },
+          { date: "2025-12-03", text: "RM1.52B preliminary cost estimate announced", done: true },
+          { date: "2025-12-16", text: "PM: expedite project for Q1 2026 tender", done: true },
+          { date: "2025-12-17", text: "Sarawak fronts RM500M for medical equipment", done: true },
+          { date: "2026-02-26", text: "Construction gathering pace in Samarahan health metropolis", done: true },
           { date: "Before 2031", text: "Target: Operational", done: false },
         ],
         sources: [
-          { label: "DayakDaily — Cancer Centre update", url: "https://dayakdaily.com" },
+          { label: "DayakDaily — RM1.52B preliminary estimate (Dec 2025)", url: "https://dayakdaily.com/sarawak-cancer-centre-construction-to-start-by-2026-with-rm1-52-bln-preliminary-estimate-cost/" },
+          { label: "DayakDaily — PM tells JKR to expedite (Dec 2025)", url: "https://dayakdaily.com/pm-tells-jkr-to-expedite-swak-cancer-centre-project-to-be-tendered-in-q1-2026-operational-before-2031/" },
+          { label: "DayakDaily — RM500M medical equipment fronted (Dec 2025)", url: "https://dayakdaily.com/patients-cannot-wait-sarawak-fronts-rm500-mln-for-cancer-centre-medical-equipment/" },
+          { label: "DayakDaily — Arden City construction & Samarahan health hub (Feb 2026)", url: "https://dayakdaily.com/arden-city-construction-gathers-pace-amid-healthcare-education-boom-in-kota-samarahan/" },
+          { label: "DayakDaily — RM40B healthcare boost in 13MP (Jul 2025)", url: "https://dayakdaily.com/sarawak-cancer-centre-among-5-key-projects-under-rm40-bln-healthcare-boost-in-13mp/" },
         ],
       },
       {
         name: "Bintulu Port — State Control Handover",
-        status: "Transitioning",
+        status: "Awaiting Cabinet Endorsement",
         statusColor: "#F0AD4E",
         lead: "Sarawak Government / Federal Government",
-        value: "—",
+        value: "RM1.8 billion",
         summary:
-          "Return of Bintulu Port operations to Sarawak state control from the federal government. Will serve as Sarawak's main port, supporting LNG exports and the broader SCORE industrial corridor.",
+          "Return of Bintulu Port to Sarawak state control from the federal government under MA63 devolution. Takeover valued at RM1.8B, agreed in principle Feb 2026. Awaiting Federal Cabinet endorsement (May 2026). Will serve as Sarawak's main port for LNG exports and SCORE corridor.",
         milestones: [
-          { date: "2026", text: "Handover to state control expected", done: false },
+          { date: "2025-01-01", text: "12-month extension agreement signed for transition", done: true },
+          { date: "2026-02-04", text: "RM1.8B takeover agreed in principle", done: true },
+          { date: "2026-02-06", text: "RM1.8B valuation confirmed after detailed negotiations", done: true },
+          { date: "2026-05-09", text: "Awaiting Federal Cabinet endorsement (latest)", done: false },
         ],
         sources: [
-          { label: "DayakDaily — Premier's 2026 outlook", url: "https://dayakdaily.com/hydrogen-powered-art-to-begin-service-in-kuching-in-final-quarter-of-2026-premier/" },
+          { label: "DayakDaily — RM1.8B takeover agreed in principle (Feb 2026)", url: "https://dayakdaily.com/rm1-8-bln-bintulu-port-takeover-agreed-in-principle-as-handover-enters-final-stage/" },
+          { label: "DayakDaily — RM1.8B valuation confirmed (Feb 2026)", url: "https://dayakdaily.com/rm1-8-bln-bintulu-port-valuation-not-arbitrary-reflects-true-asset-worth-after-detailed-negotiations/" },
+          { label: "DayakDaily — Awaiting cabinet endorsement (May 2026)", url: "https://dayakdaily.com/rm1-8-bln-bintulu-port-handover-to-sarawak-awaits-federal-cabinet-endorsement/" },
         ],
       },
     ],
