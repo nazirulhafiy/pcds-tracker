@@ -8,12 +8,12 @@ const SECTORS = [
     id: "transport",
     name: "Transport & Hydrogen Mobility",
     icon: "◈",
-    color: "#4ECCA3",
+    color: "#0d9488",
     projects: [
       {
         name: "KUTS — Kuching Urban Transportation System",
         status: "In Progress",
-        statusColor: "#F0AD4E",
+        statusColor: "#d97706",
         lead: "Sarawak Metro Sdn Bhd",
         value: "Multi-billion (phased)",
         summary:
@@ -36,12 +36,12 @@ const SECTORS = [
     id: "energy",
     name: "Energy & Renewables",
     icon: "◆",
-    color: "#F7DC6F",
+    color: "#d4a017",
     projects: [
       {
         name: "Baleh Hydroelectric Project",
         status: "In Progress",
-        statusColor: "#F0AD4E",
+        statusColor: "#d97706",
         lead: "Sarawak Energy Berhad",
         value: "~RM10 billion",
         summary:
@@ -59,7 +59,7 @@ const SECTORS = [
       {
         name: "Green Hydrogen Economy — H2ornbill & H2biscus",
         status: "Planning / Early Stage",
-        statusColor: "#5DADE2",
+        statusColor: "#4f46e5",
         lead: "SEDC Energy / Gentari (Petronas)",
         value: "Multi-billion (USD)",
         summary:
@@ -81,12 +81,12 @@ const SECTORS = [
     id: "digital",
     name: "Digital Economy & Data Centres",
     icon: "◇",
-    color: "#AF7AC5",
+    color: "#7c3aed",
     projects: [
       {
         name: "FutureData — Kuching Data Centre Park",
         status: "Under Construction",
-        statusColor: "#F0AD4E",
+        statusColor: "#d97706",
         lead: "TSG Group / Global Telecommunications Group",
         value: "USD130 million (Phase 1)",
         summary:
@@ -104,7 +104,7 @@ const SECTORS = [
       {
         name: "SMD Semiconductor — GaN Chip Development",
         status: "Active",
-        statusColor: "#4ECCA3",
+        statusColor: "#16a34a",
         lead: "SMD Semiconductor (State-owned)",
         value: "—",
         summary:
@@ -124,12 +124,12 @@ const SECTORS = [
     id: "infrastructure",
     name: "Regional Development & Infrastructure",
     icon: "▣",
-    color: "#E67E22",
+    color: "#e07c3c",
     projects: [
       {
         name: "SCORE — Sarawak Corridor of Renewable Energy",
         status: "Ongoing",
-        statusColor: "#4ECCA3",
+        statusColor: "#16a34a",
         lead: "RECODA",
         value: "Multi-billion",
         summary:
@@ -146,7 +146,7 @@ const SECTORS = [
       {
         name: "Sarawak Cancer Centre",
         status: "Equipment Procurement",
-        statusColor: "#F0AD4E",
+        statusColor: "#d97706",
         lead: "JKR / Sarawak Government",
         value: "RM1.52 billion (RM500M equipment fronted)",
         summary:
@@ -169,7 +169,7 @@ const SECTORS = [
       {
         name: "Bintulu Port — State Control Handover",
         status: "Awaiting Cabinet Endorsement",
-        statusColor: "#F0AD4E",
+        statusColor: "#d97706",
         lead: "Sarawak Government / Federal Government",
         value: "RM1.8 billion",
         summary:
@@ -192,12 +192,12 @@ const SECTORS = [
     id: "sustainability",
     name: "Sustainability & Carbon Economy",
     icon: "◉",
-    color: "#27AE60",
+    color: "#2d6a4f",
     projects: [
       {
         name: "Greenhouse Gas Emission Ordinance 2023",
         status: "Enacted",
-        statusColor: "#4ECCA3",
+        statusColor: "#16a34a",
         lead: "Sarawak Government",
         value: "—",
         summary:
@@ -214,7 +214,7 @@ const SECTORS = [
       {
         name: "PCDS 2030 — Overarching Framework",
         status: "Active",
-        statusColor: "#4ECCA3",
+        statusColor: "#16a34a",
         lead: "Sarawak Government",
         value: "Target: RM282B GDP by 2030",
         summary:
@@ -228,6 +228,81 @@ const SECTORS = [
         sources: [
           { label: "Business Events Sarawak — PCDS 2030", url: "https://businesseventssarawak.com/about-sarawak/pcds2030/" },
           { label: "Sarawak Tribune — GLCs under PCDS 2030", url: "https://www.sarawaktribune.com/agencies-soes-urged-urged-to-operate-commercially-under-pcds-2030/" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "tourism",
+    name: "Tourism & Heritage",
+    icon: "⛰",
+    color: "#ce1126",
+    projects: [
+      {
+        name: "Sarawak Delta Geopark",
+        status: "UNESCO Global Geopark",
+        statusColor: "#16a34a",
+        lead: "Sarawak Government / UNESCO",
+        value: "—",
+        summary: "3,112 km² geopark covering Kuching-Santubong-Bako region. Officially recognised as UNESCO Global Geopark on April 27, 2026 — Malaysia’s 3rd after Langkawi and Kinabalu. Branded “Borneo’s Cradle of Origin” for unique geological heritage.",
+        milestones: [
+          { date: "2024-10", text: "Geopark nomination dossier prepared", done: true },
+          { date: "2025-06", text: "UNESCO field evaluation completed (Jun 23–26)", done: true },
+          { date: "2025-09", text: "UNESCO Council acceptance secured", done: true },
+          { date: "2026-04-27", text: "Officially recognised as UNESCO Global Geopark", done: true },
+          { date: "Ongoing", text: "Geopark development and tourism infrastructure", done: false },
+        ],
+        sources: [
+          { label: "DayakDaily — UNESCO approval (Apr 2026)", url: "https://dayakdaily.com/sarawak-delta-geopark-gets-unesco-approval/" },
+          { label: "DayakDaily — Borneo’s Cradle of Origin (Apr 2026)", url: "https://dayakdaily.com/borneos-cradle-of-origin-puts-sarawak-delta-geopark-on-world-map-with-unesco-recognition/" },
+          { label: "DayakDaily — Heritage tourism boost (Apr 2026)", url: "https://dayakdaily.com/unesco-recognition-of-sarawak-delta-geopark-boosts-heritage-tourism-potential/" },
+        ],
+      },
+      {
+        name: "Niah National Park — UNESCO World Heritage",
+        status: "World Heritage Site",
+        statusColor: "#16a34a",
+        lead: "Sarawak Forestry Corporation / UNESCO",
+        value: "—",
+        summary: "Niah Caves complex — one of SE Asia’s most important archaeological sites with 65,000-year-old human remains. Inscribed as a UNESCO World Heritage Site in 2025. Premier heritage tourism draw.",
+        milestones: [
+          { date: "2019", text: "Nominated for UNESCO World Heritage listing", done: true },
+          { date: "2025", text: "Inscribed as UNESCO World Heritage Site", done: true },
+          { date: "Ongoing", text: "Heritage conservation and visitor facilities", done: false },
+        ],
+        sources: [
+          { label: "DayakDaily — Bako & Lambir after Niah inscription (Aug 2025)", url: "https://dayakdaily.com/sarawak-nominates-bako-bukit-lambir-as-asean-heritage-parks-to-elevate-global-conservation-status/" },
+          { label: "DayakDaily — Niah caves UNESCO attractions (Mar 2026)", url: "https://dayakdaily.com/batik-air-mulls-more-aidilfitri-flights-to-sarawak-as-festive-travel-demand-surges/" },
+          { label: "DayakDaily — Abang Johari: preserve Niah (Sep 2025)", url: "https://dayakdaily.com/abang-johari-it-is-everyones-responsibility-to-preserve-protect-niah-national-park/" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "agriculture",
+    name: "Agriculture & Food Security",
+    icon: "⚘",
+    color: "#b45309",
+    projects: [
+      {
+        name: "RM1 Billion Paddy Infrastructure Programme",
+        status: "Budget Allocated",
+        statusColor: "#d97706",
+        lead: "Sarawak Government / Department of Agriculture",
+        value: "RM1 billion",
+        summary: "Statewide paddy irrigation/drainage/farm road programme to boost rice self-sufficiency. RM1B allocated. Targets overtaking Kedah as Malaysia’s rice bowl by 2030 with 500,000 tonnes output.",
+        milestones: [
+          { date: "2024-06", text: "RM1B allocation announced for large-scale paddy cultivation", done: true },
+          { date: "2024-11", text: "DID restructured for agriculture/urban focus", done: true },
+          { date: "2025-08", text: "Target: 500,000 tonnes rice output by 2030 announced", done: true },
+          { date: "2026-02", text: "Minister: RM1B infra must not be diverted to oil palm", done: true },
+          { date: "2030", text: "Target: overtake Kedah as Malaysia’s rice bowl", done: false },
+        ],
+        sources: [
+          { label: "DayakDaily — RM1B allocation (Jun 2024)", url: "https://dayakdaily.com/sarawak-allocates-rm1-bln-for-large-scale-paddy-cultivation-to-boost-rice-self-sufficiency/" },
+          { label: "DayakDaily — Minister warns against misuse (Feb 2026)", url: "https://dayakdaily.com/rm1-bln-in-infra-at-stake-minister-warns-against-misuse-of-paddy-facilities-for-oil-palm/" },
+          { label: "DayakDaily — 500K tonnes rice target (Aug 2025)", url: "https://dayakdaily.com/sarawak-ups-rice-output-target-to-500000-tonnes-by-2030-in-premiers-bold-food-security-push/" },
+          { label: "DayakDaily — Overtake Kedah as rice bowl (Aug 2025)", url: "https://dayakdaily.com/sarawak-to-overtake-kedah-as-nations-rice-bowl-by-2030-eyes-global-export-future/" },
         ],
       },
     ],
@@ -246,7 +321,7 @@ function StatusBadge({ text, color }) {
         fontWeight: 600,
         letterSpacing: "0.05em",
         textTransform: "uppercase",
-        color: "#0a0f0d",
+        color: "#ffffff",
         backgroundColor: color,
         borderRadius: "2px",
       }}
@@ -264,7 +339,7 @@ function MilestoneItem({ milestone }) {
         gap: "10px",
         alignItems: "flex-start",
         padding: "6px 0",
-        borderBottom: "1px solid rgba(255,255,255,0.04)",
+        borderBottom: "1px solid #e5e7eb",
       }}
     >
       <span
@@ -274,8 +349,8 @@ function MilestoneItem({ milestone }) {
           height: "10px",
           marginTop: "4px",
           borderRadius: "50%",
-          backgroundColor: milestone.done ? "#4ECCA3" : "rgba(255,255,255,0.15)",
-          border: milestone.done ? "none" : "1px solid rgba(255,255,255,0.25)",
+          backgroundColor: milestone.done ? "#0d9488" : "#e5e7eb",
+          border: milestone.done ? "none" : "1px solid #d1d5db",
         }}
       />
       <span
@@ -283,7 +358,7 @@ function MilestoneItem({ milestone }) {
           flexShrink: 0,
           width: "90px",
           fontSize: "12px",
-          color: "rgba(255,255,255,0.45)",
+          color: "#6b7280",
           fontFamily: "'JetBrains Mono', 'SF Mono', monospace",
         }}
       >
@@ -292,7 +367,7 @@ function MilestoneItem({ milestone }) {
       <span
         style={{
           fontSize: "13px",
-          color: milestone.done ? "rgba(255,255,255,0.65)" : "rgba(255,255,255,0.8)",
+          color: milestone.done ? "#4b5563" : "#1f2937",
           textDecoration: milestone.done ? "none" : "none",
           lineHeight: 1.5,
         }}
@@ -349,9 +424,9 @@ function ProjectCard({ project, sectorColor }) {
         padding: "20px 24px",
         marginBottom: "2px",
         backgroundColor: expanded
-          ? "rgba(255,255,255,0.03)"
+          ? "#ffffff"
           : hovered
-          ? "rgba(255,255,255,0.015)"
+          ? "#f5f5f0"
           : "transparent",
         cursor: "pointer",
         transition: "all 0.25s ease",
@@ -367,14 +442,14 @@ function ProjectCard({ project, sectorColor }) {
               margin: 0,
               fontSize: "15px",
               fontWeight: 600,
-              color: "rgba(255,255,255,0.92)",
+              color: "#1a1a2e",
               fontFamily: "'Newsreader', 'Georgia', serif",
               lineHeight: 1.4,
             }}
           >
             {project.name}
           </h3>
-          <div style={{ marginTop: "6px", fontSize: "12px", color: "rgba(255,255,255,0.4)", display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
+          <div style={{ marginTop: "6px", fontSize: "12px", color: "#6b7280", display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
             <span>{project.lead}</span>
             {project.value && project.value !== "—" && (
               <span style={{ color: sectorColor, fontWeight: 600 }}>
@@ -392,7 +467,7 @@ function ProjectCard({ project, sectorColor }) {
                   fontFamily: "'JetBrains Mono', 'SF Mono', monospace",
                 }}
               >
-                <span style={{ color: doneMilestones > 0 ? "#4ECCA3" : "rgba(255,255,255,0.25)" }}>●</span>
+                <span style={{ color: doneMilestones > 0 ? "#0d9488" : "#d1d5db" }}>●</span>
                 {doneMilestones}/{totalMilestones} milestones
               </span>
             )}
@@ -402,7 +477,7 @@ function ProjectCard({ project, sectorColor }) {
           <StatusBadge text={project.status} color={project.statusColor} />
           <ChevronIcon
             expanded={expanded}
-            color={hovered || expanded ? "rgba(255,255,255,0.6)" : "rgba(255,255,255,0.2)"}
+            color={hovered || expanded ? "#6b7280" : "#d1d5db"}
           />
         </div>
       </div>
@@ -420,7 +495,7 @@ function ProjectCard({ project, sectorColor }) {
             style={{
               fontSize: "13.5px",
               lineHeight: 1.7,
-              color: "rgba(255,255,255,0.65)",
+              color: "#4b5563",
               margin: "0 0 16px 0",
               maxWidth: "720px",
             }}
@@ -488,7 +563,7 @@ function SectorSection({ sector }) {
           justifyContent: "space-between",
           alignItems: "center",
           marginBottom: "16px",
-          borderBottom: `1px solid ${sector.color}22`,
+          borderBottom: `1px solid ${sector.color}33`,
           paddingBottom: "12px",
         }}
       >
@@ -511,7 +586,7 @@ function SectorSection({ sector }) {
             style={{
               width: "80px",
               height: "3px",
-              backgroundColor: "rgba(255,255,255,0.08)",
+              backgroundColor: "#e5e7eb",
               borderRadius: "2px",
               overflow: "hidden",
             }}
@@ -528,7 +603,7 @@ function SectorSection({ sector }) {
           <span
             style={{
               fontSize: "11px",
-              color: "rgba(255,255,255,0.35)",
+              color: "#9ca3af",
               fontFamily: "'JetBrains Mono', 'SF Mono', monospace",
             }}
           >
@@ -586,7 +661,7 @@ function StatsBar() {
             style={{
               fontSize: "20px",
               fontWeight: 700,
-              color: "rgba(255,255,255,0.85)",
+              color: "#374151",
               fontFamily: "'JetBrains Mono', 'SF Mono', monospace",
             }}
           >
@@ -610,7 +685,7 @@ function StatsBar() {
 }
 
 function FilterBar({ active, onFilter }) {
-  const filters = [{ id: "all", label: "All Sectors", color: "#4ECCA3" }, ...SECTORS.map((s) => ({ id: s.id, label: s.name, color: s.color }))];
+  const filters = [{ id: "all", label: "All Sectors", color: "#0d9488" }, ...SECTORS.map((s) => ({ id: s.id, label: s.name, color: s.color }))];
 
   return (
     <div
@@ -660,8 +735,8 @@ export default function App() {
     <div
       style={{
         minHeight: "100vh",
-        backgroundColor: "#0a0f0d",
-        color: "rgba(255,255,255,0.85)",
+        backgroundColor: "#ffffff",
+        color: "#374151",
         fontFamily: "'Newsreader', 'Georgia', serif",
         opacity: loaded ? 1 : 0,
         transition: "opacity 0.5s ease",
@@ -687,7 +762,7 @@ export default function App() {
               fontWeight: 700,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "rgba(255,255,255,0.25)",
+              color: "#d1d5db",
               fontFamily: "'JetBrains Mono', 'SF Mono', monospace",
               marginBottom: "12px",
             }}
@@ -700,20 +775,20 @@ export default function App() {
               fontSize: "clamp(28px, 5vw, 42px)",
               fontWeight: 700,
               lineHeight: 1.15,
-              color: "rgba(255,255,255,0.95)",
+              color: "#1a1a2e",
               letterSpacing: "-0.02em",
             }}
           >
             PCDS 2030
             <br />
-            <span style={{ color: "#4ECCA3" }}>Project Tracker</span>
+            <span style={{ color: "#0d9488" }}>Project Tracker</span>
           </h1>
           <p
             style={{
               marginTop: "16px",
               fontSize: "15px",
               lineHeight: 1.7,
-              color: "rgba(255,255,255,0.45)",
+              color: "#6b7280",
               maxWidth: "600px",
             }}
           >
@@ -734,9 +809,9 @@ export default function App() {
           style={{
             marginTop: "64px",
             paddingTop: "24px",
-            borderTop: "1px solid rgba(255,255,255,0.06)",
+            borderTop: "1px solid #e5e7eb",
             fontSize: "12px",
-            color: "rgba(255,255,255,0.25)",
+            color: "#d1d5db",
             lineHeight: 1.7,
           }}
         >
@@ -746,7 +821,7 @@ export default function App() {
               href="https://hafiy.my"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "#4ECCA3", textDecoration: "none" }}
+              style={{ color: "#0d9488", textDecoration: "none" }}
             >
               hafiy.my
             </a>{" "}
