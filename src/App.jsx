@@ -6,7 +6,7 @@ const LAST_UPDATED = "2026-05-12";
 const SECTORS = [
   {
     id: "transport",
-    name: "Transport & Hydrogen Mobility",
+    name: "Transport & Logistics",
     icon: "◈",
     color: "#0d9488",
     projects: [
@@ -79,7 +79,7 @@ const SECTORS = [
   },
   {
     id: "digital",
-    name: "Digital Economy & Data Centres",
+    name: "Digital Economy & ICT",
     icon: "◇",
     color: "#7c3aed",
     projects: [
@@ -143,6 +143,35 @@ const SECTORS = [
           { label: "RECODA official site", url: "https://recoda.gov.my/" },
         ],
       },
+
+      {
+        name: "Bintulu Port — State Control Handover",
+        status: "Awaiting Decision",
+        statusColor: "#d97706",
+        lead: "Sarawak Government / Federal Government",
+        value: "RM1.8 billion",
+        summary:
+          "Return of Bintulu Port to Sarawak state control from the federal government under MA63 devolution. Takeover valued at RM1.8B, agreed in principle Feb 2026. Awaiting Federal Cabinet endorsement (May 2026). Will serve as Sarawak's main port for LNG exports and SCORE corridor.",
+        milestones: [
+          { date: "2025-01-01", text: "12-month extension agreement signed for transition", done: true },
+          { date: "2026-02-04", text: "RM1.8B takeover agreed in principle", done: true },
+          { date: "2026-02-06", text: "RM1.8B valuation confirmed after detailed negotiations", done: true },
+          { date: "2026-05-09", text: "Awaiting Federal Cabinet endorsement (latest)", done: false },
+        ],
+        sources: [
+          { label: "DayakDaily — RM1.8B takeover agreed in principle (Feb 2026)", url: "https://dayakdaily.com/rm1-8-bln-bintulu-port-takeover-agreed-in-principle-as-handover-enters-final-stage/" },
+          { label: "DayakDaily — RM1.8B valuation confirmed (Feb 2026)", url: "https://dayakdaily.com/rm1-8-bln-bintulu-port-valuation-not-arbitrary-reflects-true-asset-worth-after-detailed-negotiations/" },
+          { label: "DayakDaily — Awaiting cabinet endorsement (May 2026)", url: "https://dayakdaily.com/rm1-8-bln-bintulu-port-handover-to-sarawak-awaits-federal-cabinet-endorsement/" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "healthcare",
+    name: "Healthcare",
+    icon: "◆",
+    color: "#e11d48",
+    projects: [
       {
         name: "Sarawak Cancer Centre",
         status: "In Progress",
@@ -164,26 +193,6 @@ const SECTORS = [
           { label: "DayakDaily — RM500M medical equipment fronted (Dec 2025)", url: "https://dayakdaily.com/patients-cannot-wait-sarawak-fronts-rm500-mln-for-cancer-centre-medical-equipment/" },
           { label: "DayakDaily — Arden City construction & Samarahan health hub (Feb 2026)", url: "https://dayakdaily.com/arden-city-construction-gathers-pace-amid-healthcare-education-boom-in-kota-samarahan/" },
           { label: "DayakDaily — RM40B healthcare boost in 13MP (Jul 2025)", url: "https://dayakdaily.com/sarawak-cancer-centre-among-5-key-projects-under-rm40-bln-healthcare-boost-in-13mp/" },
-        ],
-      },
-      {
-        name: "Bintulu Port — State Control Handover",
-        status: "Awaiting Decision",
-        statusColor: "#d97706",
-        lead: "Sarawak Government / Federal Government",
-        value: "RM1.8 billion",
-        summary:
-          "Return of Bintulu Port to Sarawak state control from the federal government under MA63 devolution. Takeover valued at RM1.8B, agreed in principle Feb 2026. Awaiting Federal Cabinet endorsement (May 2026). Will serve as Sarawak's main port for LNG exports and SCORE corridor.",
-        milestones: [
-          { date: "2025-01-01", text: "12-month extension agreement signed for transition", done: true },
-          { date: "2026-02-04", text: "RM1.8B takeover agreed in principle", done: true },
-          { date: "2026-02-06", text: "RM1.8B valuation confirmed after detailed negotiations", done: true },
-          { date: "2026-05-09", text: "Awaiting Federal Cabinet endorsement (latest)", done: false },
-        ],
-        sources: [
-          { label: "DayakDaily — RM1.8B takeover agreed in principle (Feb 2026)", url: "https://dayakdaily.com/rm1-8-bln-bintulu-port-takeover-agreed-in-principle-as-handover-enters-final-stage/" },
-          { label: "DayakDaily — RM1.8B valuation confirmed (Feb 2026)", url: "https://dayakdaily.com/rm1-8-bln-bintulu-port-valuation-not-arbitrary-reflects-true-asset-worth-after-detailed-negotiations/" },
-          { label: "DayakDaily — Awaiting cabinet endorsement (May 2026)", url: "https://dayakdaily.com/rm1-8-bln-bintulu-port-handover-to-sarawak-awaits-federal-cabinet-endorsement/" },
         ],
       },
     ],
@@ -234,7 +243,7 @@ const SECTORS = [
   },
   {
     id: "tourism",
-    name: "Tourism & Heritage",
+    name: "Tourism",
     icon: "⛰",
     color: "#ce1126",
     projects: [
