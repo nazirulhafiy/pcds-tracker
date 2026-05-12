@@ -48,7 +48,7 @@ const SECTORS = [
           "1,285MW hydroelectric dam on the Baleh River, Kapit Division. Part of Sarawak's '10-20-30' target to reach 10GW generation capacity by 2030, predominantly from renewable sources including hydro, solar, and biomass.",
         milestones: [
           { date: "2026", text: "Target commissioning year", done: false },
-          { date: "Ongoing", text: "Main civil works and electromechanical installation", done: false },
+          { date: "Operational", text: "Main civil works and electromechanical installation", done: false },
         ],
         sources: [
           { label: "DayakDaily — Green revolution supercharging Sarawak energy (Aug 2025)", url: "https://dayakdaily.com/green-revolution-supercharging-sarawaks-energy-prowess/" },
@@ -58,7 +58,7 @@ const SECTORS = [
       // SET-P policy subsumed into PCDS 2030 Framework
       {
         name: "Green Hydrogen Economy — H2ornbill & H2biscus",
-        status: "Planning / Early Stage",
+        status: "Planning",
         statusColor: "#4f46e5",
         lead: "SEDC Energy / Gentari (Petronas)",
         value: "Multi-billion (USD)",
@@ -85,7 +85,7 @@ const SECTORS = [
     projects: [
       {
         name: "FutureData — Kuching Data Centre Park",
-        status: "Under Construction",
+        status: "In Progress",
         statusColor: "#d97706",
         lead: "TSG Group / Global Telecommunications Group",
         value: "USD130 million (Phase 1)",
@@ -103,7 +103,7 @@ const SECTORS = [
       // Digital Economy Blueprint subsumed into PCDS 2030 Framework
       {
         name: "SMD Semiconductor — GaN Chip Development",
-        status: "Active",
+        status: "Operational",
         statusColor: "#16a34a",
         lead: "SMD Semiconductor (State-owned)",
         value: "—",
@@ -128,15 +128,15 @@ const SECTORS = [
     projects: [
       {
         name: "SCORE — Sarawak Corridor of Renewable Energy",
-        status: "Ongoing",
+        status: "Operational",
         statusColor: "#16a34a",
         lead: "RECODA",
         value: "Multi-billion",
         summary:
           "Major economic corridor spanning Samalaju Industrial Park, Tanjung Manis, Mukah, Baram, and Tunoh growth nodes. Powered by hydroelectric energy from Bakun (2,400MW), Murum (944MW), and soon Baleh (1,285MW). RECODA also oversees URDA, HDA, and NRDA for rural/interior development.",
         milestones: [
-          { date: "Ongoing", text: "Industrial park expansion and investor facilitation", done: false },
-          { date: "Ongoing", text: "Rural infrastructure via URDA, HDA, NRDA", done: false },
+          { date: "Operational", text: "Industrial park expansion and investor facilitation", done: false },
+          { date: "Operational", text: "Rural infrastructure via URDA, HDA, NRDA", done: false },
         ],
         sources: [
           { label: "DayakDaily — SCORE: RM125B investment, 53K jobs (May 2025)", url: "https://dayakdaily.com/score-fuels-sarawaks-economic-growth-with-rm125-bln-investment-53000-jobs-created/" },
@@ -145,7 +145,7 @@ const SECTORS = [
       },
       {
         name: "Sarawak Cancer Centre",
-        status: "Equipment Procurement",
+        status: "In Progress",
         statusColor: "#d97706",
         lead: "JKR / Sarawak Government",
         value: "RM1.52 billion (RM500M equipment fronted)",
@@ -168,7 +168,7 @@ const SECTORS = [
       },
       {
         name: "Bintulu Port — State Control Handover",
-        status: "Awaiting Cabinet Endorsement",
+        status: "Awaiting Decision",
         statusColor: "#d97706",
         lead: "Sarawak Government / Federal Government",
         value: "RM1.8 billion",
@@ -205,7 +205,7 @@ const SECTORS = [
         milestones: [
           { date: "2023", text: "Ordinance enacted", done: true },
           { date: "2024", text: "Natural Resources and Environment Bill introduced", done: true },
-          { date: "Ongoing", text: "Carbon trading market development", done: false },
+          { date: "Operational", text: "Carbon trading market development", done: false },
         ],
         sources: [
           { label: "FULCRUM — Sarawak's low-carbon future", url: "https://fulcrum.sg/envisioning-a-low-carbon-future-sarawaks-journey-towards-sustainable-development/" },
@@ -213,7 +213,7 @@ const SECTORS = [
       },
       {
         name: "PCDS 2030 — Overarching Framework",
-        status: "Active",
+        status: "Operational",
         statusColor: "#16a34a",
         lead: "Sarawak Government",
         value: "Target: RM282B GDP by 2030",
@@ -240,7 +240,7 @@ const SECTORS = [
     projects: [
       {
         name: "Sarawak Delta Geopark",
-        status: "UNESCO Global Geopark",
+        status: "Designated",
         statusColor: "#16a34a",
         lead: "Sarawak Government / UNESCO",
         value: "—",
@@ -250,7 +250,7 @@ const SECTORS = [
           { date: "2025-06", text: "UNESCO field evaluation completed (Jun 23–26)", done: true },
           { date: "2025-09", text: "UNESCO Council acceptance secured", done: true },
           { date: "2026-04-27", text: "Officially recognised as UNESCO Global Geopark", done: true },
-          { date: "Ongoing", text: "Geopark development and tourism infrastructure", done: false },
+          { date: "Operational", text: "Geopark development and tourism infrastructure", done: false },
         ],
         sources: [
           { label: "DayakDaily — UNESCO approval (Apr 2026)", url: "https://dayakdaily.com/sarawak-delta-geopark-gets-unesco-approval/" },
@@ -260,7 +260,7 @@ const SECTORS = [
       },
       {
         name: "Niah National Park — UNESCO World Heritage",
-        status: "World Heritage Site",
+        status: "Designated",
         statusColor: "#16a34a",
         lead: "Sarawak Forestry Corporation / UNESCO",
         value: "—",
@@ -268,7 +268,7 @@ const SECTORS = [
         milestones: [
           { date: "2019", text: "Nominated for UNESCO World Heritage listing", done: true },
           { date: "2025", text: "Inscribed as UNESCO World Heritage Site", done: true },
-          { date: "Ongoing", text: "Heritage conservation and visitor facilities", done: false },
+          { date: "Operational", text: "Heritage conservation and visitor facilities", done: false },
         ],
         sources: [
           { label: "DayakDaily — Bako & Lambir after Niah inscription (Aug 2025)", url: "https://dayakdaily.com/sarawak-nominates-bako-bukit-lambir-as-asean-heritage-parks-to-elevate-global-conservation-status/" },
@@ -286,8 +286,8 @@ const SECTORS = [
     projects: [
       {
         name: "RM1 Billion Paddy Infrastructure Programme",
-        status: "Budget Allocated",
-        statusColor: "#d97706",
+        status: "Planning",
+        statusColor: "#4f46e5",
         lead: "Sarawak Government / Department of Agriculture",
         value: "RM1 billion",
         summary: "Statewide paddy irrigation/drainage/farm road programme to boost rice self-sufficiency. RM1B allocated. Targets overtaking Kedah as Malaysia’s rice bowl by 2030 with 500,000 tonnes output.",
