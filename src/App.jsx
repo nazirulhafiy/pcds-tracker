@@ -521,25 +521,28 @@ function ProjectCard({ project, sectorColor }) {
             ))}
           </div>
 
-          <div style={{ marginTop: "12px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
-            {project.sources.map((s, i) => (
-              <a
-                key={i}
-                href={s.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                style={{
-                  fontSize: "11px",
-                  color: sectorColor,
-                  textDecoration: "none",
-                  borderBottom: `1px solid ${sectorColor}33`,
-                  paddingBottom: "1px",
-                }}
-              >
-                {s.label} ↗
-              </a>
-            ))}
+          <div style={{ marginTop: "12px", display: "flex", flexDirection: "column", gap: "6px" }}>
+            <span style={{ fontSize: "9px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#9ca3af", fontFamily: "'JetBrains Mono', 'SF Mono', monospace" }}>Sources</span>
+            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+              {project.sources.map((s, i) => (
+                <a
+                  key={i}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  style={{
+                    fontSize: "11px",
+                    color: sectorColor,
+                    textDecoration: "none",
+                    borderBottom: `1px solid ${sectorColor}33`,
+                    paddingBottom: "1px",
+                  }}
+                >
+                  {s.label} ↗
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
