@@ -463,7 +463,7 @@ function ProjectCard({ project, sectorColor }) {
                   alignItems: "center",
                   gap: "4px",
                   fontSize: "11px",
-                  color: "rgba(255,255,255,0.3)",
+                  color: "#9ca3af",
                   fontFamily: "'JetBrains Mono', 'SF Mono', monospace",
                 }}
               >
@@ -510,7 +510,7 @@ function ProjectCard({ project, sectorColor }) {
                 fontWeight: 700,
                 letterSpacing: "0.12em",
                 textTransform: "uppercase",
-                color: "rgba(255,255,255,0.3)",
+                color: "#9ca3af",
                 marginBottom: "8px",
               }}
             >
@@ -643,8 +643,8 @@ function StatsBar() {
         display: "flex",
         gap: "0",
         marginBottom: "48px",
-        borderTop: "1px solid rgba(255,255,255,0.08)",
-        borderBottom: "1px solid rgba(255,255,255,0.08)",
+        borderTop: "1px solid #e5e7eb",
+        borderBottom: "1px solid #e5e7eb",
       }}
     >
       {stats.map((s, i) => (
@@ -654,7 +654,7 @@ function StatsBar() {
             flex: 1,
             padding: "16px 0",
             textAlign: "center",
-            borderRight: i < stats.length - 1 ? "1px solid rgba(255,255,255,0.06)" : "none",
+            borderRight: i < stats.length - 1 ? "1px solid #e5e7eb" : "none",
           }}
         >
           <div
@@ -672,7 +672,7 @@ function StatsBar() {
               fontSize: "10px",
               textTransform: "uppercase",
               letterSpacing: "0.1em",
-              color: "rgba(255,255,255,0.3)",
+              color: "#9ca3af",
               marginTop: "4px",
             }}
           >
@@ -705,10 +705,10 @@ function FilterBar({ active, onFilter }) {
             fontSize: "11px",
             fontWeight: 600,
             letterSpacing: "0.04em",
-            border: active === f.id ? `1px solid ${f.color || "rgba(255,255,255,0.5)"}` : "1px solid rgba(255,255,255,0.1)",
+            border: active === f.id ? `1px solid ${f.color || "#6b7280"}` : "1px solid #d1d5db",
             borderRadius: "2px",
-            backgroundColor: active === f.id ? `${(f.color || "#fff")}15` : "transparent",
-            color: active === f.id ? (f.id === "all" ? "rgba(255,255,255,0.9)" : f.color) : "rgba(255,255,255,0.4)",
+            backgroundColor: active === f.id ? `${(f.color || "#0d9488")}15` : "transparent",
+            color: active === f.id ? (f.id === "all" ? "#1a1a2e" : f.color) : "#6b7280",
             cursor: "pointer",
             transition: "all 0.15s ease",
             fontFamily: "'JetBrains Mono', 'SF Mono', monospace",
@@ -750,7 +750,7 @@ export default function App() {
         }
         * { box-sizing: border-box; }
         a:hover { opacity: 0.8; }
-        ::selection { background: #4ECCA344; }
+        ::selection { background: #0d948844; }
       `}</style>
 
       <div style={{ maxWidth: "860px", margin: "0 auto", padding: "48px 24px 80px" }}>
@@ -762,7 +762,7 @@ export default function App() {
               fontWeight: 700,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "#d1d5db",
+              color: "#6b7280",
               fontFamily: "'JetBrains Mono', 'SF Mono', monospace",
               marginBottom: "12px",
             }}
@@ -811,7 +811,7 @@ export default function App() {
             paddingTop: "24px",
             borderTop: "1px solid #e5e7eb",
             fontSize: "12px",
-            color: "#d1d5db",
+            color: "#9ca3af",
             lineHeight: 1.7,
           }}
         >
