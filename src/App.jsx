@@ -683,11 +683,10 @@ function StatsBar() {
     (sum, s) => sum + s.projects.reduce((ps, p) => ps + p.milestones.filter((m) => m.done).length, 0),
     0
   );
-  const populatedSectors = SECTORS.filter((s) => !s.isOverview && s.projects.length > 0).length;
 
   const stats = [
-    { label: "Sectors Populated", value: `${populatedSectors}/13` },
     { label: "Projects Tracked", value: totalProjects },
+    { label: "Sectors", value: 9 },
     { label: "Milestones", value: `${doneMilestones}/${allMilestones}` },
     { label: "Last Updated", value: LAST_UPDATED },
   ];
