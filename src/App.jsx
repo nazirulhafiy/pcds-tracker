@@ -683,9 +683,10 @@ function StatsBar() {
     (sum, s) => sum + s.projects.reduce((ps, p) => ps + p.milestones.filter((m) => m.done).length, 0),
     0
   );
+  const populatedSectors = SECTORS.filter((s) => !s.isOverview && s.projects.length > 0).length;
 
   const stats = [
-    { label: "Sectors", value: SECTORS.length },
+    { label: "Sectors Populated", value: `${populatedSectors}/13` },
     { label: "Projects Tracked", value: totalProjects },
     { label: "Milestones", value: `${doneMilestones}/${allMilestones}` },
     { label: "Last Updated", value: LAST_UPDATED },
@@ -739,7 +740,10 @@ function StatsBar() {
 }
 
 function FilterBar({ active, onFilter }) {
-  const filters = [{ id: "all", label: "All Sectors", color: "#0d9488" }, ...SECTORS.map((s) => ({ id: s.id, label: s.name, color: s.color }))];
+  const filters = [
+    { id: "all", label: "All Sectors", color: "#0d9488" },
+    ...SECTORS.filter((s) => !s.isOverview && s.projects.length > 0).map((s) => ({ id: s.id, label: s.name, color: s.color }))
+  ];
 
   return (
     <div
@@ -783,7 +787,8 @@ export default function App() {
     setTimeout(() => setLoaded(true), 100);
   }, []);
 
-  const filteredSectors = filter === "all" ? SECTORS : SECTORS.filter((s) => s.id === filter);
+  const visibleSectors = SECTORS.filter((s) => s.isOverview || s.projects.length > 0);
+  const filteredSectors = filter === "all" ? visibleSectors : visibleSectors.filter((s) => s.id === filter);
 
   return (
     <div
