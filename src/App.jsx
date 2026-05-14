@@ -24,15 +24,7 @@ const PCDS_SUMMARY = {
 };
 
 const SECTORS = [
-  // ─── OVERVIEW ────────────────────────────────────────────────────────────────
-  {
-    id: "overview",
-    name: "PCDS 2030 Framework",
-    icon: "◆",
-    color: "#0d9488",
-    isOverview: true,
-    projects: [PCDS_SUMMARY],
-  },
+
   // ─── ECONOMIC SECTORS (6) ──────────────────────────────────────────────────
   {
     id: "manufacturing",
@@ -359,7 +351,16 @@ const SECTORS = [
       },
     ],
   },
-];
+// ─── OVERVIEW ────────────────────────────────────────────────────────────────
+  {
+    id: "overview",
+    name: "PCDS 2030 Framework",
+    icon: "◆",
+    color: "#0d9488",
+    isOverview: true,
+    projects: [PCDS_SUMMARY],
+  },
+  ];
 // ─── COMPONENTS ─────────────────────────────────────────────────────────────
 
 function StatusBadge({ text, color }) {
