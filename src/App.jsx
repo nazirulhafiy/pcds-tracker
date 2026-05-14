@@ -25,6 +25,16 @@ const PCDS_SUMMARY = {
 
 const SECTORS = [
 
+// ─── OVERVIEW ────────────────────────────────────────────────────────────────
+  {
+    id: "overview",
+    name: "PCDS 2030 Framework",
+    icon: "◆",
+    color: "#0d9488",
+    isOverview: true,
+    projects: [PCDS_SUMMARY],
+  },
+
   // ─── ECONOMIC SECTORS (6) ──────────────────────────────────────────────────
   {
     id: "manufacturing",
@@ -187,178 +197,6 @@ const SECTORS = [
         ],
       },
     ],
-  },
-  // ─── ENABLERS (7) ─────────────────────────────────────────────────────────
-  {
-    id: "digital-transformation",
-    name: "Digital Transformation",
-    icon: "\u25c7",
-    color: "#7c3aed",
-    projects: [
-      {
-        name: "FutureData — Kuching Data Centre Park",
-        status: "In Progress",
-        statusColor: "#d97706",
-        lead: "TSG Group / Global Telecommunications Group",
-        value: "USD130 million (Phase 1)",
-        summary:
-          "500MW data centre park in Kuching. First facility: 17MW IT capacity for Global Telecommunications Group. Aligned with Sarawak Digital Economy Blueprint 2030. Sarawak's abundant hydropower makes it attractive for energy-intensive data centre operations.",
-        milestones: [
-          { date: "2025-Q2", text: "Construction began on first facility", done: true },
-          { date: "2026", text: "Target: First data centre operational", done: false },
-        ],
-        sources: [
-          { label: "DCD — FutureData first off-taker (2025)", url: "https://www.datacenterdynamics.com/en/news/futuredata-announces-first-off-taker-at-500mw-malaysian-data-center-park-in-sarawak/" },
-          { label: "The Edge — FutureData 135-acre park in Kuching (Aug 2025)", url: "https://theedgemalaysia.com/node/767538" },
-        ],
-      },
-    ],
-  },
-  {
-    id: "innovation",
-    name: "Innovation",
-    icon: "\u25c8",
-    color: "#0d9488",
-    projects: [],
-  },
-  {
-    id: "education",
-    name: "Education & Human Capital",
-    icon: "\u25c6",
-    color: "#2563eb",
-    projects: [],
-  },
-  {
-    id: "infrastructure",
-    name: "Basic Infrastructure",
-    icon: "\u25a3",
-    color: "#e07c3c",
-    projects: [
-      {
-        name: "SCORE — Sarawak Corridor of Renewable Energy",
-        status: "Operational",
-        statusColor: "#16a34a",
-        lead: "RECODA",
-        value: "Multi-billion",
-        summary:
-          "Major economic corridor spanning Samalaju Industrial Park, Tanjung Manis, Mukah, Baram, and Tunoh growth nodes. Powered by hydroelectric energy from Bakun (2,400MW), Murum (944MW), and soon Baleh (1,285MW). RECODA also oversees URDA, HDA, and NRDA for rural/interior development.",
-        milestones: [
-          { date: "Operational", text: "Industrial park expansion and investor facilitation", done: false },
-          { date: "Operational", text: "Rural infrastructure via URDA, HDA, NRDA", done: false },
-        ],
-        sources: [
-          { label: "DayakDaily — SCORE: RM125B investment, 53K jobs (May 2025)", url: "https://dayakdaily.com/score-fuels-sarawaks-economic-growth-with-rm125-bln-investment-53000-jobs-created/" },
-          { label: "RECODA official site", url: "https://recoda.gov.my/" },
-        ],
-      },
-    ],
-  },
-  {
-    id: "utilities",
-    name: "Utilities",
-    icon: "\u26a1",
-    color: "#d4a017",
-    projects: [],
-  },
-  {
-    id: "transport",
-    name: "Transport",
-    icon: "\u25c9",
-    color: "#1d4ed8",
-    projects: [
-      {
-        name: "KUTS — Kuching Urban Transportation System",
-        status: "In Progress",
-        statusColor: "#d97706",
-        lead: "Sarawak Metro Sdn Bhd",
-        value: "Multi-billion (phased)",
-        summary:
-          "Southeast Asia's first hydrogen-powered Autonomous Rapid Transit (ART) system. Phase 1 covers three lines: Blue Line (Rembus\u2013Hikmah Exchange), Red Line, and Green Line. ART vehicles run on dedicated trackless lanes using rubber tyres.",
-        milestones: [
-          { date: "2025-12", text: "RM58M contract awarded to Linde EOX for hydrogen plant relocation to Rembus Depot", done: true },
-          { date: "2026-Q1", text: "First two ART units arrive in Kuching", done: true },
-          { date: "2026-Q4", text: "Target: Begin passenger operations", done: false },
-          { date: "TBD", text: "Feeder bus network (hydrogen-powered) rollout", done: false },
-        ],
-        sources: [
-          { label: "DayakDaily — ART Q4 2026 operations", url: "https://dayakdaily.com/hydrogen-powered-art-to-begin-service-in-kuching-in-final-quarter-of-2026-premier/" },
-          { label: "The Edge — KUTS hydrogen plant relocation", url: "https://theedgemalaysia.com/node/786079" },
-        ],
-      },
-      {
-        name: "Bintulu Port — State Control Handover",
-        status: "Awaiting Decision",
-        statusColor: "#d97706",
-        lead: "Sarawak Government / Federal Government",
-        value: "RM1.8 billion",
-        summary:
-          "Return of Bintulu Port to Sarawak state control from the federal government under MA63 devolution. Takeover valued at RM1.8B, agreed in principle Feb 2026. Awaiting Federal Cabinet endorsement (May 2026). Will serve as Sarawak's main port for LNG exports and SCORE corridor.",
-        milestones: [
-          { date: "2025-01-01", text: "12-month extension agreement signed for transition", done: true },
-          { date: "2026-02-04", text: "RM1.8B takeover agreed in principle", done: true },
-          { date: "2026-02-06", text: "RM1.8B valuation confirmed after detailed negotiations", done: true },
-          { date: "2026-05-09", text: "Awaiting Federal Cabinet endorsement (latest)", done: false },
-        ],
-        sources: [
-          { label: "DayakDaily — RM1.8B takeover agreed in principle (Feb 2026)", url: "https://dayakdaily.com/rm1-8-bln-bintulu-port-takeover-agreed-in-principle-as-handover-enters-final-stage/" },
-          { label: "DayakDaily — RM1.8B valuation confirmed (Feb 2026)", url: "https://dayakdaily.com/rm1-8-bln-bintulu-port-valuation-not-arbitrary-reflects-true-asset-worth-after-detailed-negotiations/" },
-          { label: "DayakDaily — Awaiting cabinet endorsement (May 2026)", url: "https://dayakdaily.com/rm1-8-bln-bintulu-port-handover-to-sarawak-awaits-federal-cabinet-endorsement/" },
-        ],
-      },
-    ],
-  },
-  {
-    id: "renewable-energy",
-    name: "Renewable Energy",
-    icon: "\u267b",
-    color: "#d97706",
-    projects: [
-      {
-        name: "Baleh Hydroelectric Project",
-        status: "In Progress",
-        statusColor: "#d97706",
-        lead: "Sarawak Energy Berhad",
-        value: "~RM10 billion",
-        summary:
-          "1,285MW hydroelectric dam on the Baleh River, Kapit Division. Part of Sarawak's '10-20-30' target to reach 10GW generation capacity by 2030, predominantly from renewable sources including hydro, solar, and biomass.",
-        milestones: [
-          { date: "2026", text: "Target commissioning year", done: false },
-          { date: "Operational", text: "Main civil works and electromechanical installation", done: false },
-        ],
-        sources: [
-          { label: "DayakDaily — Green revolution supercharging Sarawak energy (Aug 2025)", url: "https://dayakdaily.com/green-revolution-supercharging-sarawaks-energy-prowess/" },
-          { label: "DayakDaily — ASEAN grid & Baleh 1,285MW by 2030 (Jan 2026)", url: "https://dayakdaily.com/sarawak-urges-asean-to-study-european-union-nordic-models-to-realise-regional-power-grid-dream/" },
-        ],
-      },
-      {
-        name: "Green Hydrogen Economy — H2ornbill & H2biscus",
-        status: "Planning",
-        statusColor: "#4f46e5",
-        lead: "SEDC Energy / Gentari (Petronas)",
-        value: "Multi-billion (USD)",
-        summary:
-          "Large-scale green hydrogen production in Bintulu. Sarawak H2 Hub (JV between SEDC Energy and Gentari) to be sole developer/operator. Will supply green hydrogen for downstream e-methanol and sustainable aviation fuel production. H2biscus involves Samsung Engineering, Lotte Chemical, and Korea National Oil Corporation.",
-        milestones: [
-          { date: "2026", text: "Hydrogen refuelling station at Rembus — ~1,900 tonnes/year capacity", done: false },
-          { date: "2028", text: "Target: Sarawak H2 Hub operations begin", done: false },
-          { date: "2027+", text: "Target: Large-scale commercial hydrogen production and export", done: false },
-        ],
-        sources: [
-          { label: "DayakDaily — H2ornbill & H2biscus hydrogen economy (Aug 2025)", url: "https://dayakdaily.com/sarawak-powers-ahead-in-hydrogen-economy/" },
-          { label: "DayakDaily — Bintulu low-carbon industrial push (Jan 2026)", url: "https://dayakdaily.com/bintulu-set-to-anchor-msias-low-carbon-industrial-push-as-swak-integrates-hydrogen-ccus-and-carbon-pricing/" },
-          { label: "FULCRUM — Sarawak's green hydrogen ambitions", url: "https://fulcrum.sg/sarawaks-green-hydrogen-ambitions-what-it-means-for-southeast-asia/" },
-        ],
-      },
-    ],
-  },
-// ─── OVERVIEW ────────────────────────────────────────────────────────────────
-  {
-    id: "overview",
-    name: "PCDS 2030 Framework",
-    icon: "◆",
-    color: "#0d9488",
-    isOverview: true,
-    projects: [PCDS_SUMMARY],
   },
   ];
 // ─── COMPONENTS ─────────────────────────────────────────────────────────────
@@ -687,7 +525,7 @@ function StatsBar() {
 
   const stats = [
     { label: "Projects Tracked", value: totalProjects },
-    { label: "Sectors", value: 9 },
+    { label: "Sectors", value: 6 },
     { label: "Milestones", value: `${doneMilestones}/${allMilestones}` },
     { label: "Last Updated", value: LAST_UPDATED },
   ];
